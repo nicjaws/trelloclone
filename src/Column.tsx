@@ -5,12 +5,15 @@ interface ColumnProps {
   text:string
 }
 
-export const Column = () => {
+export const Column = ({    text, 
+children
+} : React.PropsWithChildren<ColumnProps>) => {
   return (
     <ColumnContainer>
       <ColumnTitle>
-        Column Title
+        {text}
       </ColumnTitle>
+      {children}
     </ColumnContainer>
   )
 
